@@ -1,0 +1,15 @@
+###libcamhal rpm build and install
+How to build camera hal for tgl-iotg
+
+Steps:
+1.cd ipu6-camera-hal
+2.source env.sh (set camera hal build and link pkg_config_path)
+3.mkdir build & cd build
+4.cmake -DIPU_VER=${IPU6_VER} \
+ -DCMAKE_BUILD_TYPE=Release  \
+ -DUSE_PG_LITE_PIPE=ON ../
+5.make package
+
+### will generated libcamhal-xxxx.rpm  ########
+
+
